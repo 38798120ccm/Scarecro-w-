@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Scarecro-w-.sln"
+    "dotnet.defaultSolution": "Scarecro'w'.sln"
 }
