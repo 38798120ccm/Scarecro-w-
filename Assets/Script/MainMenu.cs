@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
     // [Obsolete("Optional")]
     public void startGame() {
         // default value 1 can be a string.
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     // Not really quit the game.
@@ -62,6 +62,13 @@ public class MainMenu : MonoBehaviour
 
     public void Start() {
         quitPanel.SetActive(false);
+    }
+
+
+    // Methods for test
+
+    public void testSFX() {
+        AudioManager.plugin.playSFX("test1");
     }
 
 
