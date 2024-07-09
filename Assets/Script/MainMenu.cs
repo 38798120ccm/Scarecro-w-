@@ -30,11 +30,15 @@ public class MainMenu : MonoBehaviour
     }
 
     public void setMusicVolume() {
-        AudioManager.plugin.setMusicVolume(musicSlider.value);
+        float value = musicSlider.value;
+        AudioManager.plugin.setMusicVolume(value);
+        PlayerPrefs.SetFloat("settings.musicvolume", value);
     }
 
     public void setSFXVolume() {
-        AudioManager.plugin.setSFXVolume(sfxSlider.value);
+        float value = sfxSlider.value;
+        AudioManager.plugin.setSFXVolume(value);
+        PlayerPrefs.SetFloat("settings.sfxvolume", value);
     }
 
     // Not really quit the game.
@@ -68,6 +72,21 @@ public class MainMenu : MonoBehaviour
 
     public void Start() {
         quitPanel.SetActive(false);
+        initalizeVolume();
+    }
+
+    void initalizeVolume() {
+        if (PlayerPrefs.HasKey("settings.musicvolume")) {
+            float value = PlayerPrefs.GetFloat("settings.musicvolume");
+            AudioManager.plugin.setMusicVolume(value);
+            musicSlider.SetValueWithoutNotify(value);
+        }
+
+        if (PlayerPrefs.HasKey("settings.sfxvolume")) {
+            float value = PlayerPrefs.GetFloat("settings.sfxvolume");
+            AudioManager.plugin.setSFXVolume(value);
+            sfxSlider.SetValueWithoutNotify(value);
+        }
     }
 
     

@@ -24,10 +24,22 @@ public class AudioManager : MonoBehaviour
     }
 
     // If you need background music
-    private void Start() {
+    void Start() {
+        // Load volume from saved file
+        initalizeVolume();
         // play BGM on start
         playMusic("wtf");
 
+    }
+
+    void initalizeVolume() {
+        if (PlayerPrefs.HasKey("settings.musicvolume")) {
+            setMusicVolume(PlayerPrefs.GetFloat("settings.musicvolume"));
+        }
+
+        if (PlayerPrefs.HasKey("settings.sfxvolume")) {
+            setSFXVolume(PlayerPrefs.GetFloat("settings.sfxvolume"));
+        }
     }
     
 
