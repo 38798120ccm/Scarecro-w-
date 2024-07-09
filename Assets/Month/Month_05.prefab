@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7726497705226035331}
   - component: {fileID: 3955618290308701850}
   m_Layer: 0
-  m_Name: Month_01
+  m_Name: Month_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,5 +47,4 @@ MonoBehaviour:
   season: 0
   monthcode: 0
   weather: 0
-  events_Onable:
-  - {fileID: 0}
+  events_Onable: []
