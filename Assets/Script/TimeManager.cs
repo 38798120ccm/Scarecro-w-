@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] List<Month> months;
+    public Month now;
+    void EnterMonth(Month month)
+    {
+        now = month;
+    }
+    void ExitMonth()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ToMonth(Month month)
     {
-        
+        EnterMonth(month);
     }
-
-    // 1145141919810
-    
 }
