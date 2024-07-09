@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    List<Event> events;
-    List<Event> events_started;
-    public void StartEvents()
+    [SerializeField] List<Event> events_list;
+    [SerializeField] List<Event> events_started;
+    public void StartEvents(Event e)
     {
-        foreach(Event e in events)
+        if(e.CheckRequirement() == true)
         {
-            if(e.CheckRequirement() == true)
-            {
-                events_started.Add(e);
-            }
+            events_started.Add(e);
+            e.StartEvent();
         }
+
     }
     public void DuringEvent()
     {

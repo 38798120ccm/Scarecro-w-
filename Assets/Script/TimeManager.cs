@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] EventManager eventManager;
     [SerializeField] List<Month> months;
-    int MonthCode;
-    void EnterMonth()
+    public Month now;
+    void EnterMonth(Month month)
     {
-        
-    }
-    void DuringMonth()
-    {
-
+        now = month;
     }
     void ExitMonth()
     {
         
     }
-    void ToMonth(Month month)
+    public void ToMonth(Month month)
     {
-        MonthCode = month.monthcode;
+        EnterMonth(month);
     }
 }

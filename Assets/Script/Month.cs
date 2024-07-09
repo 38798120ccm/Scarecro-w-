@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class Month : ScriptableObject
+public class Month : MonoBehaviour
 {
     public Season season;
     public int monthcode;
+    public Weather weather;
     public List<Event> events_Onable;
 }
 public enum Season
@@ -15,4 +15,12 @@ public enum Season
     Summer,
     Autumn,
     Winter
+}
+public enum Weather
+{
+    Raining,
+    Sunny,
+    Snowy,
+    Lightning,
+    Cloudy
 }

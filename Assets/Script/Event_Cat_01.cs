@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Event_Cat_01 : Event
 {
-    int MonthCode;
+    [SerializeField] int MonthCode;
     public override bool CheckRequirement()
     {
         if(MonthCode == 0)
