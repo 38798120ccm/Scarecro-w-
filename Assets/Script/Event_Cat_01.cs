@@ -7,7 +7,7 @@ public class Event_Cat_01 : Event
     [SerializeField] int MonthCode;
     public override bool CheckRequirement()
     {
-        if(MonthCode == 0)
+        if(MonthCode == 1)
         {
             return true;
         }
@@ -18,7 +18,7 @@ public class Event_Cat_01 : Event
     }
     public override bool CheckEndRequirement()
     {
-        if (MonthCode != 0)
+        if (MonthCode != 1)
         {
             return true;
         }
