@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7726497705226035331}
   - component: {fileID: 3955618290308701850}
   m_Layer: 0
-  m_Name: Month_04
+  m_Name: Month_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597816503c1d80c4aa3a907212c47b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  season: 1
-  monthcode: 9
+  season: 3
+  monthcode: 5
   weather: 0
   events_Onable: []
