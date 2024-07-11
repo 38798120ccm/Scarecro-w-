@@ -8,19 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] EventManager eventManager;
     void Start()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        timeManager.StartFirstMonth();
     }
     void FixedUpdate()
     {
+        timeManager.DuringMonth();
         eventManager.DuringEvent();
-    }
-    void Initiate()
-    {
-
     }
 }

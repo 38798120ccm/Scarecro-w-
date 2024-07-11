@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   season: 3
-  monthcode: 4
+  monthcode: 11
   weather: 0
   events_Onable: []

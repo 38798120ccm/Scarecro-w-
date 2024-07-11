@@ -4,28 +4,10 @@ using UnityEngine;
 
 public class Event_Cat_01 : Event
 {
-    [SerializeField] int MonthCode;
+
     public override bool CheckRequirement()
     {
-        if(MonthCode == 1)
-        {
-            return true;
-        }
-        else 
-        {
-            return false;
-        }    
-    }
-    public override bool CheckEndRequirement()
-    {
-        if (MonthCode != 1)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }  
+        return true;
     }
     public override void StartEvent()
     {
@@ -37,6 +19,6 @@ public class Event_Cat_01 : Event
     }
     public override void EndEvent()
     {
-        
+        Destroy(gameObject);
     }
 }
