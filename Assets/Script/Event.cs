@@ -10,8 +10,17 @@ abstract public class Event : MonoBehaviour
     abstract public void EndEvent();
     public EventManager eventManager;
     public int MonthCode;
-    public void SetInanimationFalse()
+    void SetInanimationFalse()
     {
         eventManager.Inanimation = false;
+    }
+    void SetEventStarted()
+    {
+        eventManager.events_started.Add(this);
+    }
+    public void EndStartAnimation()
+    {
+        SetInanimationFalse();
+        SetEventStarted();
     }
 }
