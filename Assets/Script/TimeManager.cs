@@ -15,8 +15,23 @@ public class TimeManager : MonoBehaviour
             eventManager.AddEvent(e);
         }
     }
+    public void DuringMonth()
+    {
+        if(eventManager.events_list.Count != 0)
+        {
+            eventManager.StartEvents(eventManager.events_list[0]);
+        }
+    }
     public void ExitMonth()
     {
         
+    }
+    public void StartFirstMonth()
+    {
+        EnterMonth(months[0]);
+    }  
+    public void NextMonth()
+    {
+        EnterMonth(months[months.IndexOf(now)+1]);
     }
 }
