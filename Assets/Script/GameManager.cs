@@ -10,17 +10,8 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
-    void Update()
-    {
-        
-    }
     void FixedUpdate()
     {
         eventManager.DuringEvent();
-    }
-    void Initiate()
-    {
-
     }
 }
