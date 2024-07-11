@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Event_Cat_01 : Event
 {
-
+    [SerializeField] Animator animator;
     public override bool CheckRequirement()
     {
         return true;
     }
     public override void StartEvent()
     {
-
+        animator.Play("Cat_01_GetInScene");
     }
     public override void DuringEvent()
     {
-        
+        animator.Play("Cat_01_Idle");
     }
     public override void EndEvent()
     {
-        Destroy(gameObject);
+
     }
 }
