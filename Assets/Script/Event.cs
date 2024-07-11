@@ -8,11 +8,13 @@ abstract public class Event : MonoBehaviour
     abstract public void StartEvent();
     abstract public void DuringEvent();
     abstract public void EndEvent();
+    public GameManager gameManager;
     public EventManager eventManager;
+    public TimeManager timeManager;
     public int MonthCode;
     void SetInanimationFalse()
     {
-        eventManager.Inanimation = false;
+        gameManager.Inanimation = false;
     }
     void SetEventStarted()
     {
@@ -22,5 +24,10 @@ abstract public class Event : MonoBehaviour
     {
         SetInanimationFalse();
         SetEventStarted();
+    }
+    public void EndEndAnimation()
+    {
+        SetInanimationFalse();
+        Destroy(this.gameObject);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Event_Cat_01 : Event
 {
+    [SerializeField] Event Cat_02;
     [SerializeField] Animator animator;
     public override bool CheckRequirement()
     {
@@ -19,6 +20,6 @@ public class Event_Cat_01 : Event
     }
     public override void EndEvent()
     {
-
+        animator.Play("Cat_01_Raining");
     }
 }

@@ -17,14 +17,18 @@ public class TimeManager : MonoBehaviour
     }
     public void DuringMonth()
     {
-        if(eventManager.events_list.Count != 0)
+        if(eventManager.events_stopping.Count != 0)
+        {
+            eventManager.EndEvent(eventManager.events_started[0]);
+        }
+        else if(eventManager.events_list.Count != 0)
         {
             eventManager.StartEvents(eventManager.events_list[0]);
         }
     }
     public void ExitMonth()
     {
-        
+        eventManager.events_started.ForEach(i => eventManager.events_stopping.Add(i));
     }
     public void StartFirstMonth()
     {
@@ -32,6 +36,8 @@ public class TimeManager : MonoBehaviour
     }  
     public void NextMonth()
     {
+        ExitMonth();
         EnterMonth(months[months.IndexOf(now)+1]);
     }
+    
 }
