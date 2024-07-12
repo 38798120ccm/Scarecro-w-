@@ -13,6 +13,9 @@ public class MovableObject : MonoBehaviour
     // Rigidbody 2D
     // XX Collider 2D (box/circle)
 
+    [SerializeField] Weather weather;
+    [SerializeField] GameManager gameManager;
+
     Vector2 mousePos;
     Vector2 distance;
 
@@ -35,7 +38,7 @@ public class MovableObject : MonoBehaviour
     }
 
     void OnMouseUpAsButton() {
-        // Added if needed
+        gameManager.ChangeWeather(weather);
     }
 
 

@@ -14,10 +14,7 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W))
-        {
-            timeManager.NextMonth();
-        }
+
     }
     void FixedUpdate()
     {
@@ -26,5 +23,9 @@ public class GameManager : MonoBehaviour
             timeManager.DuringMonth();
             eventManager.DuringEvent();
         }
+    }
+    public void ChangeWeather(Weather weather)
+    {
+        timeManager.now.weather = weather;
     }
 }

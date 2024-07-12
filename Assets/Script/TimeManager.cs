@@ -39,5 +39,4 @@ public class TimeManager : MonoBehaviour
         ExitMonth();
         EnterMonth(months[months.IndexOf(now)+1]);
     }
-    
 }
