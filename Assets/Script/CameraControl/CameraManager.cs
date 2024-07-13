@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    public static CameraManager plugin;
-    public ObjectItem[] TargetObjects;
+    public GameObject TargetObjects;
+    [SerializeField] Vector3 centre;
+    [SerializeField] float speed = 5;
 
     public Vector3 offset;
 
@@ -17,32 +18,27 @@ public class CameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        plugin = this;
         //startTime = Time.time;
         //startPos = transform.position;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        moveToCat();
-    }
 
-    public void moveTo(string name) {
+    public void moveTo() {
 
-        ObjectItem s = Array.Find(TargetObjects, x => x.name == name);
-        if (s == null) {
-            Debug.Log("Target is not found!");
-            return;
-        }
+        // ObjectItem s = Array.Find(TargetObjects, x => x.name == name);
+        // if (s == null) {
+        //     Debug.Log("Target is not found!");
+        //     return;
+        // }
 
-        if (!s.canMove) {
-            return;
-        }
+        // if (!s.canMove) {
+        //     return;
+        // }
 
         //transform.position = Vector3.Lerp(transform.position, s.transform.position, 0.001f);
-        float step = s.speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, s.transform.position + offset, step);
+        float step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, TargetObjects.transform.position + offset, step);
 
         // Distance moved equals elapsed time times speed..
         //float distCovered = (Time.time - startTime) * s.speed;
@@ -58,21 +54,21 @@ public class CameraManager : MonoBehaviour
         //}
 
     }
-
+    public void ReCentre()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, centre, speed*Time.deltaTime);
+    }
 
 
     // Testing method
-    public void moveToCat() {
-        moveTo("cat");
-    }
 
-    public void cancelCatMove() {
-        ObjectItem s = Array.Find(TargetObjects, x => x.name == name);
-        if (s == null) {
-            Debug.Log("Target is not found!");
-            return;
-        }
+    // public void cancelCatMove() {
+    //     ObjectItem s = Array.Find(TargetObjects, x => x.name == name);
+    //     if (s == null) {
+    //         Debug.Log("Target is not found!");
+    //         return;
+    //     }
 
-        s.canMove = false;
-    }
+    //     s.canMove = false;
+    // }
 }

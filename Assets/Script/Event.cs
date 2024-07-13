@@ -12,7 +12,7 @@ abstract public class Event : MonoBehaviour
     public EventManager eventManager;
     public TimeManager timeManager;
     public int MonthCode;
-    void SetInanimationFalse()
+    public void SetInanimationFalse()
     {
         gameManager.Inanimation = false;
     }

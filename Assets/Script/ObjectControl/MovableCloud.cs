@@ -5,12 +5,12 @@ using UnityEngine;
 public class MovableCloud : MonoBehaviour
 {
 
-    Vector2 mousePos;
+    Vector3 mousePos;
     float startPosY;
     public float Ylimit;
     public float Yavailable;
     //float distance;
-    Rigidbody2D rb2d;
+    // Rigidbody2D rb2d;
 
     bool canMove;
 
@@ -19,15 +19,15 @@ public class MovableCloud : MonoBehaviour
     {
         instance = this;
         canMove = true;
-        rb2d = GetComponent<Rigidbody2D>();
+        // rb2d = GetComponent<Rigidbody2D>();
         startPosY = transform.position.y;
         //distance = transform.position.y - mousePos.y;
     }
 
     void OnMouseDrag() {
-        if (mousePos.y <= startPosY && mousePos.y >= (startPosY - Ylimit) && canMove) {
-            transform.position = new Vector2(transform.position.x, mousePos.y);
-            rb2d.velocity = Vector2.zero;
+        if (mousePos.y*4.5f <= startPosY && mousePos.y*4.5f >= (startPosY - Ylimit) && canMove) {
+            transform.position = new Vector3(transform.position.x, mousePos.y*4.5f, 0.5f);
+            // rb2d.velocity = Vector2.zero;
         }
     }
 
@@ -45,7 +45,8 @@ public class MovableCloud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
+        Debug.Log(mousePos);
     }
 
     // These methods are for other class calling.
