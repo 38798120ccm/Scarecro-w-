@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] EventManager eventManager;
     [SerializeField] WeatherManager weatherManager;
     [SerializeField] CameraManager cameraManager;
-    [SerializeField] MovableCloud movableCloud;
     
     public bool Inanimation;
     public bool IsPause;
@@ -19,13 +18,9 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W))
-        {
-            weatherManager.Rain();
-        }
         if (!Inanimation)
         {
-            // movableCloud.UIUpdata();
+            weatherManager.WeatherUpdata();
         }
     }
     void FixedUpdate()
@@ -45,10 +40,6 @@ public class GameManager : MonoBehaviour
     public void ChangeCameraTarget(GameObject target)
     {
         cameraManager.TargetObjects = target;
-    }
-    public void ChangeWeather(Weather weather)
-    {   
-
     }
     public void SetInanimationFalse()
     {

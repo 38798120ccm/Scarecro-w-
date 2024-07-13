@@ -5,10 +5,13 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] List<Month> months;
+    [SerializeField] WeatherManager weatherManager;
     [SerializeField] EventManager eventManager;
     public Month now;
     public void EnterMonth(Month month)
     {
+        weatherManager.Inputed = false;
+        weatherManager.ChangeWeather(month.weather);
         now = month;
         foreach(Event e in now.events_Onable)
         {

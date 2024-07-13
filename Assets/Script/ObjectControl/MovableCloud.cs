@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class MovableCloud : MonoBehaviour
 {
+    [SerializeField] Weather weather;
+    [SerializeField] WeatherManager weatherManager;
     bool startDrag;
     Vector2 startPos;
     public float posYlimit;
     public float posYavailable;
+    public float posYFixed;
 
     bool canMove = true;
 
     bool detected;
 
-    void Start() {
+    void Awake() {
         startPos = transform.position;
     }
 
@@ -32,9 +35,10 @@ public class MovableCloud : MonoBehaviour
 
         if (transform.position.y <= posYavailable) {
             // Call method
+            weatherManager.Inputed = true;
+            weatherManager.ChangeWeather(weather);
             Debug.Log("Object is in the area!");
-            canMove = false;
-            detected = true;
+            EnableCloud();
             return;
         }
 
@@ -53,6 +57,16 @@ public class MovableCloud : MonoBehaviour
             }
         }
     }
-    
-
+    public void ReSetCloud()
+    {
+        transform.position = startPos;
+        canMove = true;
+        detected = false;
+    }
+    public void EnableCloud()
+    {
+        transform.position = new Vector2(startPos.x, posYFixed);
+        canMove = false;
+        detected = true;
+    }
 }

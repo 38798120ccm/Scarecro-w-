@@ -7,7 +7,9 @@ public class EventManager : MonoBehaviour
     [SerializeField] Vector3 instantiatept;
     public List<Event> events_list;
     [SerializeField] TimeManager timeManager;
+    [SerializeField] WeatherManager weatherManager;
     [SerializeField] GameManager gameManager;
+    [SerializeField] Transform sceneObjects;
     public List<Event> events_started;
     public List<Event> events_stopping;
     public void StartEvents(Event e)
@@ -16,7 +18,8 @@ public class EventManager : MonoBehaviour
         {
             gameManager.Inanimation = true;
             events_list.Remove(e);
-            GameObject eventGameOject = Instantiate(e.gameObject,instantiatept,Quaternion.identity);
+            GameObject eventGameOject = Instantiate(e.gameObject, instantiatept, Quaternion.identity, sceneObjects);
+            eventGameOject.GetComponent<SpriteRenderer>().color = weatherManager.WeatherColor();
             InitiateEvent(eventGameOject.GetComponent<Event>());
             gameManager.ChangeCameraTarget(eventGameOject);
             eventGameOject.GetComponent<Event>().StartEvent();

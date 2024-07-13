@@ -16,11 +16,3 @@ public enum Season
     Autumn,
     Winter
 }
-public enum Weather
-{
-    Raining,
-    Sunny,
-    Snowy,
-    Lightning,
-    Cloudy
-}

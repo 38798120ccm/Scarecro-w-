@@ -47,5 +47,4 @@ MonoBehaviour:
   season: 1
   monthcode: 1
   weather: 1
-  events_Onable:
-  - {fileID: 0}
+  events_Onable: []
