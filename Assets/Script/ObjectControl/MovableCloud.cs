@@ -4,58 +4,55 @@ using UnityEngine;
 
 public class MovableCloud : MonoBehaviour
 {
+    bool startDrag;
+    Vector2 startPos;
+    public float posYlimit;
+    public float posYavailable;
 
-    Vector2 mousePos;
-    float startPosY;
-    public float Ylimit;
-    public float Yavailable;
-    //float distance;
-    Rigidbody2D rb2d;
+    bool canMove = true;
 
-    bool canMove;
+    bool detected;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        instance = this;
-        canMove = true;
-        rb2d = GetComponent<Rigidbody2D>();
-        startPosY = transform.position.y;
-        //distance = transform.position.y - mousePos.y;
+    void Start() {
+        startPos = transform.position;
     }
 
-    void OnMouseDrag() {
-        if (mousePos.y <= startPosY && mousePos.y >= (startPosY - Ylimit) && canMove) {
-            transform.position = new Vector2(transform.position.x, mousePos.y);
-            rb2d.velocity = Vector2.zero;
+    public void StartDragUI() {
+        if (detected) {
+            return;
         }
+        startDrag = true;
     }
 
-    void OnMouseUpAsButton()
-    {
-        // If the cloud being pulled to the area
-        if (transform.position.y <= (startPosY - Ylimit) + Yavailable) {
-            // call method
-            Debug.Log("FUCK YOU");
+    public void StopDragUI() {
+        if (detected) {
+            return;
+        }
+        startDrag = false;
+
+        if (transform.position.y <= posYavailable) {
+            // Call method
+            Debug.Log("Object is in the area!");
             canMove = false;
+            detected = true;
+            return;
+        }
+
+        transform.position = startPos;
+    }
+    public void UIUpdata()
+    {
+        if (startDrag) {
+            Vector3 mousePos = Input.mousePosition;
+            // Debug.Log("mousePos Y: " + mousePos.y);
+            // Debug.Log("new mousePos Y: " + Camera.main.);
+            if (mousePos.y <= startPos.y && mousePos.y >= posYlimit && canMove) {
+                // Debug.Log("transform position: " + transform.position);
+                // Debug.Log("Mouse position: " + Input.mousePosition);
+                transform.position = new Vector2(transform.position.x, mousePos.y);
+            }
         }
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
-
-    // These methods are for other class calling.
-    static MovableCloud instance;
-    public static MovableCloud getInstance() { return instance; }
-
-    public void wakeUp() {
-        canMove = true;
-    }
-
     
 
 }

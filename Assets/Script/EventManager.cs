@@ -18,6 +18,7 @@ public class EventManager : MonoBehaviour
             events_list.Remove(e);
             GameObject eventGameOject = Instantiate(e.gameObject,instantiatept,Quaternion.identity);
             InitiateEvent(eventGameOject.GetComponent<Event>());
+            gameManager.ChangeCameraTarget(eventGameOject);
             eventGameOject.GetComponent<Event>().StartEvent();
         }
     }
