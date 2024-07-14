@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597816503c1d80c4aa3a907212c47b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  season: 1
+  season: 3
   monthcode: 1
-  weather: 1
+  weather: 2
   events_Onable: []

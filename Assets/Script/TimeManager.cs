@@ -5,14 +5,15 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] List<Month> months;
+    [SerializeField] GameManager gameManager;
     [SerializeField] WeatherManager weatherManager;
     [SerializeField] EventManager eventManager;
     public Month now;
     public void EnterMonth(Month month)
     {
-        weatherManager.Inputed = false;
-        weatherManager.ChangeWeather(month.weather);
+        gameManager.Inputed = false;
         now = month;
+        weatherManager.ChangeWeather(month.weather);
         foreach(Event e in now.events_Onable)
         {
             eventManager.AddEvent(e);
@@ -28,6 +29,10 @@ public class TimeManager : MonoBehaviour
         {
             eventManager.StartEvents(eventManager.events_list[0]);
         }
+        else if(gameManager.Inputed == true && eventManager.events_stopping.Count == 0 && eventManager.events_list.Count == 0)
+        {
+            NextMonth();
+        }
     }
     public void ExitMonth()
     {
@@ -39,7 +44,6 @@ public class TimeManager : MonoBehaviour
     }  
     public void NextMonth()
     {
-        ExitMonth();
         EnterMonth(months[months.IndexOf(now)+1]);
     }
 }

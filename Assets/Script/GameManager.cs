@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] EventManager eventManager;
     [SerializeField] WeatherManager weatherManager;
     [SerializeField] CameraManager cameraManager;
-    
+    public bool Inputed;
     public bool Inanimation;
     public bool IsPause;
     void Start()
@@ -20,7 +20,13 @@ public class GameManager : MonoBehaviour
     {
         if (!Inanimation)
         {
+            cameraManager.ReCentre();
+            if(eventManager.events_list.Count != 0) return;
             weatherManager.WeatherUpdata();
+        }
+        else 
+        {
+            cameraManager.moveTo();
         }
     }
     void FixedUpdate()
@@ -28,13 +34,13 @@ public class GameManager : MonoBehaviour
         
         if (!Inanimation)
         {
-            cameraManager.ReCentre();
+            
             timeManager.DuringMonth();
             eventManager.DuringEvent();
         }
         else
         {
-            cameraManager.moveTo();
+            
         }
     }
     public void ChangeCameraTarget(GameObject target)

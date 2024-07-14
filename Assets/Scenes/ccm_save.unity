@@ -207,14 +207,14 @@ RectTransform:
   m_GameObject: {fileID: 27573729}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.4, y: 1, z: 1}
+  m_LocalScale: {x: 4.4, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 217845807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1153.2, y: 15}
+  m_AnchoredPosition: {x: -1153.2, y: 90}
   m_SizeDelta: {x: 198.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27573731
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -409,10 +409,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -430,7 +430,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 2120696518}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -5490,14 +5490,14 @@ RectTransform:
   m_GameObject: {fileID: 205677000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -5, y: 1, z: 1}
+  m_LocalScale: {x: -10.23, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 217845807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 100, y: 15}
+  m_AnchoredPosition: {x: 35, y: 90}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205677002
@@ -5514,7 +5514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5660,9 +5660,9 @@ RectTransform:
   - {fileID: 786687880}
   m_Father: {fileID: 129970920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 250, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 550, y: 410}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217845808
@@ -5723,10 +5723,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weather: 4
+  gameManager: {fileID: 1174961460}
   weatherManager: {fileID: 1049992007}
-  posYlimit: 400
-  posYavailable: 450
-  posYFixed: 400
+  rectTransform: {fileID: 129970920}
 --- !u!114 &217845810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6138,9 +6137,9 @@ RectTransform:
   - {fileID: 484817574}
   m_Father: {fileID: 129970920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 300, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 650, y: 410}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349906660
@@ -6239,10 +6238,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weather: 0
+  gameManager: {fileID: 1174961460}
   weatherManager: {fileID: 1049992007}
-  posYlimit: 400
-  posYavailable: 450
-  posYFixed: 400
+  rectTransform: {fileID: 129970920}
 --- !u!90 &368100009
 Avatar:
   m_ObjectHideFlags: 0
@@ -6393,14 +6391,14 @@ RectTransform:
   m_GameObject: {fileID: 374734209}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -7.92, y: 1, z: 1}
+  m_LocalScale: {x: -7.92, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 349906658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 479, y: 15}
+  m_AnchoredPosition: {x: 479, y: 90}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &374734211
@@ -6417,7 +6415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6552,14 +6550,14 @@ RectTransform:
   m_GameObject: {fileID: 484817573}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.48, y: 1, z: 1}
+  m_LocalScale: {x: 8.48, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 349906658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 973.68, y: 15}
+  m_AnchoredPosition: {x: 973.68, y: 90}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484817575
@@ -6576,7 +6574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6610,7 +6608,6 @@ GameObject:
   m_Component:
   - component: {fileID: 501553610}
   - component: {fileID: 501553611}
-  - component: {fileID: 501553612}
   m_Layer: 0
   m_Name: SmallCloud (1)
   m_TagString: Untagged
@@ -6685,23 +6682,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &501553612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501553609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515ce75864bd44a818e233fce8d45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weather: 0
-  weatherManager: {fileID: 0}
-  posYlimit: 0
-  posYavailable: 0
-  posYFixed: 0
 --- !u!1 &521407144
 GameObject:
   m_ObjectHideFlags: 0
@@ -7161,6 +7141,7 @@ MonoBehaviour:
   - {fileID: 3955618290308701850, guid: 107afeccb9bc18042b604b895f939b79, type: 3}
   - {fileID: 3955618290308701850, guid: 01feb6c336711264eb141e648c6d2ceb, type: 3}
   - {fileID: 3955618290308701850, guid: 88c8d867180c70947a3067567d19f49d, type: 3}
+  gameManager: {fileID: 1174961460}
   weatherManager: {fileID: 1049992007}
   eventManager: {fileID: 1879365967}
   now: {fileID: 0}
@@ -7407,14 +7388,14 @@ RectTransform:
   m_GameObject: {fileID: 786687879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.4, y: 1, z: 1}
+  m_LocalScale: {x: 4.4, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 217845807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -746.2, y: 15}
+  m_AnchoredPosition: {x: -746.2, y: 90}
   m_SizeDelta: {x: 198.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &786687881
@@ -7431,7 +7412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7482,14 +7463,14 @@ RectTransform:
   m_GameObject: {fileID: 798819551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -5, y: 1, z: 1}
+  m_LocalScale: {x: -6.61, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1896860535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -83, y: 15}
+  m_AnchoredPosition: {x: 28, y: 90}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798819553
@@ -7506,7 +7487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7641,14 +7622,14 @@ RectTransform:
   m_GameObject: {fileID: 858145287}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 6.46, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 349906658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -17, y: 15}
+  m_AnchoredPosition: {x: -17, y: 90}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858145291
@@ -7665,7 +7646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7971,19 +7952,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   now_weather: 1
   timeManager: {fileID: 577164694}
+  gameManager: {fileID: 1174961460}
   movableClouds:
   - {fileID: 217845809}
   - {fileID: 349906663}
   - {fileID: 1896860537}
   raining_color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
-  snowy_color: {r: 0.41131186, g: 0.745283, b: 0.7070053, a: 0}
+  snowy_color: {r: 0.7307761, g: 0.9622642, b: 0.93503034, a: 1}
   sunny_color: {r: 1, g: 1, b: 1, a: 1}
   cloudy_color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
-  lightning_color: {r: 0.62352943, g: 0.62352943, b: 0.62352943, a: 0}
+  lightning_color: {r: 0.62352943, g: 0.62352943, b: 0.62352943, a: 1}
   snowy_particle: {fileID: 167442124}
   raining_particle: {fileID: 1647873308}
   sceneObjects: {fileID: 1470288829}
-  Inputed: 0
 --- !u!1 &1063031490
 GameObject:
   m_ObjectHideFlags: 0
@@ -8095,14 +8076,14 @@ RectTransform:
   m_GameObject: {fileID: 1130661077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -8.48, y: 1, z: 1}
+  m_LocalScale: {x: -8.48, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1896860535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1073.6799, y: 15}
+  m_AnchoredPosition: {x: -1073.6799, y: 90}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1130661079
@@ -8119,7 +8100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8260,6 +8241,7 @@ MonoBehaviour:
   eventManager: {fileID: 1879365967}
   weatherManager: {fileID: 1049992007}
   cameraManager: {fileID: 2120696520}
+  Inputed: 0
   Inanimation: 0
   IsPause: 0
 --- !u!4 &1174961461
@@ -8445,7 +8427,7 @@ Transform:
   m_GameObject: {fileID: 1284091038}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.030451326, w: 0.9995363}
-  m_LocalPosition: {x: -8.9, y: 2.6, z: 18.86}
+  m_LocalPosition: {x: -23.78, y: 2.6, z: 18.86}
   m_LocalScale: {x: 1.24, y: 1.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13848,14 +13830,14 @@ RectTransform:
   m_GameObject: {fileID: 1669083200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -5, y: 1, z: 1}
+  m_LocalScale: {x: -5, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 217845807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -401, y: 15}
+  m_AnchoredPosition: {x: -401, y: 90}
   m_SizeDelta: {x: 198.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669083202
@@ -13872,7 +13854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14125,14 +14107,14 @@ RectTransform:
   m_GameObject: {fileID: 1845349673}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.9199996, y: 1, z: 1}
+  m_LocalScale: {x: 7.9199996, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1896860535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -579, y: 15}
+  m_AnchoredPosition: {x: -579, y: 90}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845349675
@@ -14149,7 +14131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14262,9 +14244,9 @@ RectTransform:
   - {fileID: 1130661078}
   m_Father: {fileID: 129970920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 350, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 750, y: 410}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896860536
@@ -14325,10 +14307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weather: 3
+  gameManager: {fileID: 1174961460}
   weatherManager: {fileID: 1049992007}
-  posYlimit: 400
-  posYavailable: 450
-  posYFixed: 400
+  rectTransform: {fileID: 129970920}
 --- !u!114 &1896860538
 MonoBehaviour:
   m_ObjectHideFlags: 0

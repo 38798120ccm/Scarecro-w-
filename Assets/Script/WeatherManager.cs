@@ -6,13 +6,13 @@ public class WeatherManager : MonoBehaviour
 {
     public Weather now_weather;
     [SerializeField] TimeManager timeManager;
+    [SerializeField] GameManager gameManager;
     [SerializeField] List<MovableCloud> movableClouds;
     [SerializeField] Color raining_color, snowy_color, sunny_color, cloudy_color, lightning_color;
 
     [SerializeField] GameObject snowy_particle;
     [SerializeField] GameObject raining_particle;
     [SerializeField] GameObject sceneObjects;
-    public bool Inputed;
     
     public void WeatherUpdata()
     {
@@ -63,8 +63,8 @@ public class WeatherManager : MonoBehaviour
                 break;
         }
         now_weather = weather;
-        if(!Inputed) return;
-        timeManager.NextMonth();
+        if(!gameManager.Inputed) return;
+        timeManager.ExitMonth();
     }
     public Color WeatherColor()
     {
