@@ -119,9 +119,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06993d128293adf4eb306cc79d2bb1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screentext_list:
+  - wow is a cat
+  - so cute ~
+  - meow meow =w=
+  - ...
+  - that is my cat
+  - ...
+  - "Oh you have a cat\_"
+  - meow
+  - ...
+  - :)
+  - ...
+  - uwu
+  - :)
+  - What a nice day
+  - Aww, she sleep behind you
+  - meow ~
+  - ... :)
+  - Stop it get some help
+  - MEOW
+  - :)
+  - The cat gonna go
+  - ':CRY:'
+  - bye byee
+  - :)
+  text_num: 0
+  NoCamera: 1
+  UI_Animator: {fileID: 0}
+  S_Talk_Animator: {fileID: 0}
+  S_talk: {fileID: 0}
+  screentext: {fileID: 0}
+  weatherManager: {fileID: 0}
   gameManager: {fileID: 0}
   eventManager: {fileID: 0}
   timeManager: {fileID: 0}
   MonthCode: 0
+  house: {fileID: 0}
+  explosion: {fileID: 0}
   Cat_02: {fileID: 0}
   animator: {fileID: 4307995919760689505}

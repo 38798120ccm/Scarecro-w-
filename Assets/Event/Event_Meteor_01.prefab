@@ -131,12 +131,12 @@ MonoBehaviour:
   - ... ...
   - "Just a\_Scarecrow"
   - ... ... ...
-  - I forget to keep the seed in hydrated
+  - wheat...
   - ...
   - So you keep thinking about the wheat as a Scarecrow
   - Fine, you are lucky with me
   - I can call my lovely friend to control the weather
-  - And I'm not gonna to tell you I we can do it lol
+  - And I'm not gonna to tell you we can do it lol
   - ...
   - ... ...
   - RAIN!!!!!
@@ -146,17 +146,18 @@ MonoBehaviour:
   - hope don't over hydrated
   - :)
   - ...
-  - :)
-  - :)
-  - :)
-  - :)
-  - :)
+  - '? ? ?'
+  - :) ...
+  - ' I swear I told him'
+  - ...
+  - (Do something man) ... ...
   text_num: 0
   NoCamera: 1
   UI_Animator: {fileID: 0}
   S_Talk_Animator: {fileID: 0}
   S_talk: {fileID: 0}
   screentext: {fileID: 0}
+  weatherManager: {fileID: 0}
   gameManager: {fileID: 0}
   eventManager: {fileID: 0}
   timeManager: {fileID: 0}

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
+    [SerializeField] Animator Screen_Animator;
     [SerializeField] List<Month> months;
     [SerializeField] GameManager gameManager;
     [SerializeField] WeatherManager weatherManager;
@@ -31,7 +32,8 @@ public class TimeManager : MonoBehaviour
         }
         else if(gameManager.Inputed == true && eventManager.events_stopping.Count == 0 && eventManager.events_list.Count == 0)
         {
-            NextMonth();
+            gameManager.Inanimation = true;
+            Screen_Animator.Play("NextDay");
         }
     }
     public void ExitMonth()
@@ -45,5 +47,9 @@ public class TimeManager : MonoBehaviour
     public void NextMonth()
     {
         EnterMonth(months[months.IndexOf(now)+1]);
+    }
+    public void FalseInanimation()
+    {
+        gameManager.Inanimation = false;
     }
 }

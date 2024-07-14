@@ -26,6 +26,7 @@ public class Event_Meteor_01 : Event
         }
         else
         {
+            text_num = 25;
             animator.Play("Meteor_03");
         }
     }
