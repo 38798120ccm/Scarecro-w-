@@ -36,6 +36,7 @@ abstract public class Event : MonoBehaviour
     {
         SetInanimationFalse();
         SetEventStarted();
+        screentext.text = " ";
     }
     public void EndEndAnimation()
     {

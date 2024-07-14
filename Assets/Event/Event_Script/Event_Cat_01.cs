@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Event_Cat_01 : Event
 {
@@ -20,6 +21,22 @@ public class Event_Cat_01 : Event
     }
     public override void EndEvent()
     {
-        animator.Play("Cat_01_Raining");
+        if(weatherManager.now_weather == Weather.Raining)
+        {
+            animator.Play("Cat_01_Raining");
+        }
+        else if(weatherManager.now_weather == Weather.Sunny)
+        {
+            animator.Play("Cat_01_Sunny");
+        }
+        
+    }
+    void PlayIdle()
+    {
+        animator.Play("Cat_01_Idle");
+    }
+    void End()
+    {
+        SceneManager.LoadScene(2);
     }
 }
