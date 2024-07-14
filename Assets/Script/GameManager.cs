@@ -9,12 +9,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] EventManager eventManager;
     [SerializeField] WeatherManager weatherManager;
     [SerializeField] CameraManager cameraManager;
+    [SerializeField] List<GameObject> clouds;
     public bool Inputed;
     public bool Inanimation;
     public bool IsPause;
     void Start()
     {
-        timeManager.StartFirstMonth();
+        cameraManager.GetComponent<Animator>().Play("Camera");
     }
     void Update()
     {
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
             if(eventManager.events_list.Count != 0) return;
             weatherManager.WeatherUpdata();
         }
-        else 
+        else if(cameraManager.TargetObjects != null)
         {
             cameraManager.moveTo();
         }
@@ -50,5 +51,12 @@ public class GameManager : MonoBehaviour
     public void SetInanimationFalse()
     {
         Inanimation = false;
+    }
+    public void EnableCloud()
+    {
+        foreach(GameObject cloud in clouds)
+        {
+            cloud.gameObject.SetActive(true);
+        }
     }
 }

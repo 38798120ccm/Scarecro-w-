@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
     // [Obsolete("Optional")]
     public void startGame() {
         // default value 1 can be a string.
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     // Not really quit the game.

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    [SerializeField] TimeManager timeManager;
     public GameObject TargetObjects;
     [SerializeField] Vector3 centre;
     [SerializeField] float speed = 5;
@@ -38,7 +39,7 @@ public class CameraManager : MonoBehaviour
 
         //transform.position = Vector3.Lerp(transform.position, s.transform.position, 0.001f);
         float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, TargetObjects.transform.position + offset, step);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(TargetObjects.transform.position.x, TargetObjects.transform.position.y, 0), step);
 
         // Distance moved equals elapsed time times speed..
         //float distCovered = (Time.time - startTime) * s.speed;
@@ -71,4 +72,9 @@ public class CameraManager : MonoBehaviour
 
     //     s.canMove = false;
     // }
+    public void First()
+    {
+        timeManager.StartFirstMonth();
+        this.gameObject.GetComponent<Animator>().enabled = false;
+    } 
 }

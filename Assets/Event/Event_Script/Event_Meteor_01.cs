@@ -5,13 +5,14 @@ using UnityEngine;
 public class Event_Meteor_01 : Event
 {
     [SerializeField] Animator animator;
+    
     public override bool CheckRequirement()
     {
         return true;
     }
     public override void StartEvent()
     {
-        animator.Play("Meteor_FallDown");
+        animator.Play("RollingMeteor");
     }
     public override void DuringEvent()
     {
@@ -19,6 +20,19 @@ public class Event_Meteor_01 : Event
     }
     public override void EndEvent()
     {
-        SetInanimationFalse();
+        if(weatherManager.now_weather == Weather.Raining)
+        {
+            animator.Play("Meteor_02");
+        }
+        else
+        {
+            animator.Play("Meteor_03");
+        }
+    }
+
+    public void Explosion()
+    {
+        Destroy(house);
+        explosion.Play();
     }
 }

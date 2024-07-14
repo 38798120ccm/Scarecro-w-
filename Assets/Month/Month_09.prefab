@@ -47,7 +47,4 @@ MonoBehaviour:
   season: 2
   monthcode: 9
   weather: 0
-  events_Onable:
-  - {fileID: 5189453932745974378, guid: 5f6d2c02813fa6848b75f52f244d8136, type: 3}
-  - {fileID: 5189453932745974378, guid: 5f6d2c02813fa6848b75f52f244d8136, type: 3}
-  - {fileID: 5189453932745974378, guid: 5f6d2c02813fa6848b75f52f244d8136, type: 3}
+  events_Onable: []

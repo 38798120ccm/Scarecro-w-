@@ -46,7 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   season: 1
   monthcode: 8
-  weather: 0
+  weather: 1
   events_Onable:
-  - {fileID: 5189453932745974378, guid: 5f6d2c02813fa6848b75f52f244d8136, type: 3}
-  - {fileID: 5189453932745974378, guid: 5f6d2c02813fa6848b75f52f244d8136, type: 3}
+  - {fileID: 1933310694790397127, guid: ae3e0171f4bdc9049b08f4f5644d7505, type: 3}
